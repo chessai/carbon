@@ -1,0 +1,26 @@
+packages: .
+
+source-repository-package
+  type: git
+  location: https://github.com/haskell-primitive/primitive-slice
+  tag: 554f1f0cf00d0c445b4210ce8367be5269e6ce64
+
+source-repository-package
+  type: git
+  location: https://github.com/andrewthad/castagnoli
+  tag: 08e2ceb5a88ccca7b3b56c3758be1d3942c2de49
+
+source-repository-package
+  type: git
+  location: https://github.com/andrewthad/sockets
+  tag: 3a87ec2a2828cde91d14a7c95ba470c0916037c0
+
+source-repository-package
+  type: git
+  location: https://github.com/chessai/builder
+  tag: b0a4fb23acc5dfb4de69d883747ae2d66bf06ba7
+
+source-repository-package
+  type: git
+  location: https://github.com/andrewthad/small-bytearray-builder
+  tag: 902eede957e1f519acbed99b4b620593e053d965
