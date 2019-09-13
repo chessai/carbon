@@ -11,6 +11,8 @@
 
 module Carbon
   ( Carbon(..)
+  , CarbonException(..)
+  , Point(..)
 
   , write
   , with
