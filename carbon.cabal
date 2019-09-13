@@ -38,7 +38,7 @@ library
     Carbon
   build-depends:
     , base >= 4.11 && < 4.14
-    , builder >= 0.1 && < 0.2
+    , builder >= 0.2 && < 0.3
 --    , ip >= 1.4 && < 1.6
     , primitive >= 0.7 && < 0.8
 --    , primitive-offset >= 0.2 && < 0.3

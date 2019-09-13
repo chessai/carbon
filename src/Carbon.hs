@@ -29,9 +29,12 @@ import qualified Builder as B
 newtype Carbon = Carbon { getCarbon :: Connection }
 
 data CarbonException
-  = CarbonConnectException (ConnectException ('Internet 'V4) 'Uninterruptible)
-  | CarbonSendException (SendException 'Uninterruptible)
-  | CarbonCloseException CloseException
+  = CarbonConnectException
+      (ConnectException ('Internet 'V4) 'Uninterruptible)
+  | CarbonSendException
+      (SendException 'Uninterruptible)
+  | CarbonCloseException
+      CloseException
 
 -- <metric path> <metric value> <metric timestamp>
 data Point = Point
@@ -46,12 +49,12 @@ newline = 10
 
 encodePoint :: Point -> ByteArray
 encodePoint Point{path,value,timestamp} = B.build
-  (  B.buildByteArray path 0 (sizeofByteArray path)
-  <> B.buildWord8 space
-  <> B.buildByteArray value 0 (sizeofByteArray value)
-  <> B.buildWord8 space
-  <> B.buildWord64 timestamp
-  <> B.buildWord8 newline
+  (  B.bytearray path 0 (sizeofByteArray path)
+  <> B.word8 space
+  <> B.bytearray value 0 (sizeofByteArray value)
+  <> B.word8 space
+  <> B.word64 timestamp
+  <> B.word8 newline
   )
 
 encodePoints :: Array Point -> UnliftedArray ByteArray

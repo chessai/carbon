@@ -18,7 +18,7 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/chessai/builder
-  tag: b0a4fb23acc5dfb4de69d883747ae2d66bf06ba7
+  tag: 642d8425dd155587b60aeefd7fd99bf9e29b378c
 
 source-repository-package
   type: git
